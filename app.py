@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     y_data = txt_to_list("data/singlet-trace-1.txt")
     x_data = [item for item in range(0, len(y_data))]
-    return render_template("index.html", y_values=y_data, x_values=x_data)
+    return render_template("index.html", y_values=y_data, x_values=x_data, title="Home")
 
 def txt_to_list(txt_file):
     my_file = open(txt_file, "r")
