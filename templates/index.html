@@ -1,35 +1,6 @@
 {% extends 'base.html' %}
 
 {% block main %}
-    <div>
-        <canvas id="myChart"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-const labels = {{ x_values|tojson }};
-const data = {
-  labels: labels,
-  datasets: [{
-    label: 'My First dataset',
-    backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-    data: {{  y_values|tojson  }},
-  }]
-};
-const config = {
-  type: 'line',
-  data: data,
-  options: {
-    plugins: {
-        legend: {
-            display: false
-        },
-    }
-  }
-};
-const myChart = new Chart(
-    document.getElementById('myChart').getContext('2d'),
-    config
-  );
-</script>
+<h1>Do you speak Qubit?</h1>
+<a class="btn btn-primary" href="/challenge">Challenge</a>
 {% endblock %}
