@@ -19,7 +19,13 @@ const data = {
 const config = {
   type: 'line',
   data: data,
-  options: {}
+  options: {
+    plugins: {
+        legend: {
+            display: false
+        },
+    }
+  }
 };
 const myChart = new Chart(
     document.getElementById('myChart').getContext('2d'),
@@ -27,4 +33,3 @@ const myChart = new Chart(
   );
 </script>
 {% endblock %}
-</html>
